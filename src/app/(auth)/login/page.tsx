@@ -9,6 +9,7 @@ import Button from "@/components/ui/Button";
 import { extractError } from "@/lib/utils";
 import { Sparkles, User, Lock, ArrowRight } from "lucide-react";
 import toast from "react-hot-toast";
+import Cookies from "js-cookie";
 
 export default function LoginPage() {
   const { login } = useAuth();
@@ -35,11 +36,11 @@ export default function LoginPage() {
       await login({ username: username.trim(), password });
       toast.success("Welcome back!");
       // Redirect based on role
-      const role = document.cookie.includes("educore_role=admin") ? "admin"
-        : document.cookie.includes("educore_role=instructor") ? "instructor"
-        : "student";
-      if (role === "admin") router.push("/admin-panel");
-      else router.push("/");
+      // Redirect based on role
+    const role = Cookies.get("educore_role");
+    if (role === "admin")            router.push("/admin-panel");
+    else if (role === "instructor")  router.push("/instructor/dashboard");
+    else                             router.push("/student/dashboard");
     } catch (err: unknown) {
       const msg = err instanceof Error ? err.message : "";
       if (msg === "pending_approval") {
