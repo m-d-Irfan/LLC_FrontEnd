@@ -28,7 +28,9 @@ export default function PublicNav() {
     router.push("/");
   };
 
-  const dashboardHref = user?.is_instructor
+  const dashboardHref = user?.is_staff
+    ? "/admin-panel/dashboard"
+    : user?.is_instructor
     ? "/instructor/dashboard"
     : "/student/dashboard";
 
