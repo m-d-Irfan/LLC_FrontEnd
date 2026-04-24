@@ -6,6 +6,8 @@ export interface User {
   last_name: string;
   is_instructor: boolean;
   is_student: boolean;
+  is_staff: boolean;
+  instructor_status: "pending" | "approved" | "rejected";
 }
 
 export interface AuthTokens {

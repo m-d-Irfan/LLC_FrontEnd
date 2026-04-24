@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Link from "next/link";
 import { useAuth } from "@/contexts/AuthContext";
 import { enrollmentApi, progressApi } from "@/lib/api";
 import CourseCard from "@/components/courses/CourseCard";
@@ -104,12 +105,11 @@ export default function StudentDashboard() {
                 Browse the catalog and enroll in your first course.
               </p>
             </div>
-            <a
-              href="/student/courses"
+            <Link href="/student/courses"
               className="mt-2 px-5 py-2.5 rounded-xl bg-brand-500 text-white text-sm font-dm font-semibold hover:bg-brand-600 transition-colors"
             >
               Browse Courses
-            </a>
+            </Link>
           </div>
         ) : (
           <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-6">

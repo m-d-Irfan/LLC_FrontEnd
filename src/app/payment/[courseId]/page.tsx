@@ -297,7 +297,7 @@ export default function PaymentPage() {
 
             <p className="text-center text-xs font-dm text-slate-400">
               Need help?{" "}
-              <a href="/#contact" className="text-brand-500 hover:underline">Contact our support team</a>
+              <Link href="/#contact" className="text-brand-500 hover:underline">Contact our support team</Link>
             </p>
           </div>
         </div>
