@@ -1,13 +1,15 @@
 import axios from "axios";
 import Cookies from "js-cookie";
 
-const API_BASE = process.env.NEXT_PUBLIC_API_URL || "https://llc-backend-rpyz.onrender.com";
+// const API_BASE = process.env.NEXT_PUBLIC_API_URL || "https://llc-backend-rpyz.onrender.com";
+const API_BASE = process.env.NEXT_PUBLIC_API_URL || "http://localhost:3000";
 
 const apiClient = axios.create({
   baseURL: API_BASE,
   headers: { "Content-Type": "application/json" },
   timeout: 30000,
 });
+
 
 // ── Request interceptor: attach access token ──────────────────────────────
 apiClient.interceptors.request.use(
