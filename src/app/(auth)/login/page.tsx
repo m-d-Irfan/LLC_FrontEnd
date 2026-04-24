@@ -38,7 +38,7 @@ export default function LoginPage() {
       // Redirect based on role
       // Redirect based on role
     const role = Cookies.get("educore_role");
-    if (role === "admin")            router.push("/admin-panel");
+    if (role === "admin")            router.push("/admin-panel/dashboard");
     else if (role === "instructor")  router.push("/instructor/dashboard");
     else                             router.push("/student/dashboard");
     } catch (err: unknown) {
