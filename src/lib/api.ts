@@ -135,7 +135,7 @@ export const adminApi = {
 
   // Instructors
   listInstructors: () =>
-    apiClient.get("/api/admin/instructors/"),
+    apiClient.get("/api/admin/instructors"),
   listPendingInstructors: () =>
     apiClient.get("/api/admin/instructors/pending/"),
   approveInstructor: (id: number) =>
@@ -145,7 +145,7 @@ export const adminApi = {
 
   // Courses
   listCourses: () =>
-    apiClient.get("/api/admin/courses/"),
+    apiClient.get("/api/admin/courses"),
   deleteCourse: (id: number, reason?: string) =>
     apiClient.delete(`/api/admin/courses/${id}/delete/`, { data: { reason } }),
 

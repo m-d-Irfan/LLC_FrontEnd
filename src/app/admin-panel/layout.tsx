@@ -11,7 +11,7 @@ import {
 import { cn } from "@/lib/utils";
 
 const NAV = [
-  { href: "/admin-panel",             label: "Dashboard",   icon: LayoutDashboard, exact: true },
+  { href: "/admin-panel/dashboard",   label: "Dashboard",   icon: LayoutDashboard, exact: true },
   { href: "/admin-panel/instructors", label: "Instructors", icon: GraduationCap },
   { href: "/admin-panel/users",       label: "Users",       icon: Users },
   { href: "/admin-panel/courses",     label: "Courses",     icon: BookOpen },
