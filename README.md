@@ -1,4 +1,4 @@
-# EduCore AI — Frontend
+# EduCore AI - Frontend
 
 A modern, fully responsive Learning Management System frontend built with **Next.js 14**, **TypeScript**, **React**  and **Tailwind CSS**.
 
